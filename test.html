@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PMB Online</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+	label {
+		font-weight: bold;
+	}
+	body {
+		background-image: url(back.png) ;
+	}
+</style>
+<body>
+	<center>
+		<img src="head.jpg" alt="header" width="1140px" height="350px">
+	</center>
+	<div style="background: white;" class="container p-3 my -3 border">
+	<h1 class="text-center">FROM PENDAFTARAN MAHASISWA BARU</h1>
+		<form id="form" method="POST">
+			<div class="alert alert-secondary">
+				<strong>DATA DIRI</strong>
+			</div>
+			<div class="row">
+				<div class="col-sm-7">
+					<div class="form-group">
+					<label>Nama Lengkap :</label>
+					<input type="text" name="nama" class="from-control" placeholder="Masukan Nama Lengkap">
+				</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="form-group">
+					<label>Nomor Identitas (NIK) :</label>
+					<input type="text" name="nik" class="from-control" placeholder="Masukan Nomor NIK">
+				</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+					<label>Tempat Lahir :</label>
+					<input type="text" name="tmpt_lahir" class="from-control" placeholder="Masukan Tempat Lahir">
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Tanggal Lahir :</label>
+					<input type="text" name="tgl_lahir" class="from-control" placeholder="Masukan Tanggal Lahir">
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Status :</label>
+					<select class="from-control" name="Status">
+						<option>Pilih</option>
+						<option value="Belum Menikah">Belum Menikah</option>
+						<option value="Menikah">Menikah</option>
+						<option value="Duda">Duda</option>
+						<option value="Janda">Janda</option>
+					</select>
+				</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+					<label>Jenis Kelamin :</label>
+					<br>
+					<input type="radio" name="jk" value="Laki-Laki"> Laki-Laki
+					<br>
+					<input type="radio" name="jk" value="Perempuan"> Perempuan
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Agama :</label>
+					<select class="from-control" name="agama">
+						<option>Pilih</option>
+						<option value="Islam">Islam</option>
+						<option value="Protestan">Protestan</option>
+						<option value="Katholik">Katholik</option>
+						<option value="Hindu">Hindu</option>
+						<option value="Buddha">Buddha</option>
+						<option value="Lainnya">Lainnya</option>
+					</select>
+				</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+					<label>Kewarganegaraan :</label>
+					<br>
+					<input type="radio" name="kwn" value="WNI"> Warga Negara Indonesia
+					<br>
+					<input type="radio" name="kwn" value="WNA"> Warga Negara Asing
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+					<label>E-Mail :</label>
+					<input type="email" name="email" class="from-control" placeholder="Masukan E-Mail">
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>No Handphone :</label>
+					<input type="text" name="no_hp" class="from-control" placeholder="Masukan Nomor Handphone">
+				</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="form-group">
+					<label>Nama Ibu Kandung :</label>
+					<input type="text" name="nama_ibu" class="from-control" placeholder="Masukan Nama Ibu Kandung">
+				</div>
+				</div>
+			</div>
+			
+			<div class="alert alert-secondary">
+				<strong>DATA ALAMAT DOMISILI</strong>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+					<label>Alamat Rumah :</label>
+					<textarea class="from-control" name="alamat" rows="2" id="alamat"></textarea>
+				</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="form-group">
+					<label>Kode Pos :</label>
+					<input type="text" name="kode_pos" class="from-control" placeholder="Masukan Kode Pos">
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-sm">
+					<div class="form-group">
+					<label>Kecamatan :</label>
+					<input type="text" name="kecamatan" class="from-control" placeholder="Masukan Kecamatan">
+				</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+					<label>Kabupaten :</label>
+					<input type="text" name="kabupaten" class="from-control" placeholder="Masukan Kabupaten/Kota">
+				</div>
+				</div>
+				<div class="col-sm">
+					<div class="form-group">
+					<label>Provinsi :</label>
+					<input type="text" name="provinsi" class="from-control" placeholder="Masukan Provinsi">
+				</div>
+				</div>
+			</div>
+
+			<div class="alert alert-secondary">
+				<strong>DATA PENDIDIKAN TERAKHIR</strong>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Asal Sekolah :</label>
+					<input type="text" name="asal_sekolah" class="from-control" placeholder="Masukan Asal Sekolah">
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Jurusan :</label>
+					<select class="from-control" name="Pendidikan">
+						<option>Pilih</option>
+						<option value="SMA-IPA">SMA - IPA</option>
+						<option value="SMA-IPS">SMA - IPS</option>
+						<option value="SMA-Bahasa">SMA - Bahasa</option>
+						<option value="SMK-Ekonomi">SMK - Ekonomi</option>
+						<option value="SMK-Teknik">SMK  -Teknik</option>
+						<option value="SMK-Keterampilan">SMK - Keterampilan</option>
+					</select>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-sm-2">
+					<div class="form-group">
+					<label>Tahun Lulus :</label>
+					<input type="text" name="lulusan" class="from-control" placeholder="Tahun Lulus">
+				</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+					<label>Rata-Rata Nilai Raport :</label>
+					<input type="text" name="nilai_raport" class="from-control" placeholder="Masukan Rata-Rata Nilai Raport">
+				</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					<label>Alamat Sekolah :</label>
+					<textarea class="from-control" name="alamat_sekolah" rows="2" id="alamat"></textarea>
+				</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					<label>Akreditasi Sekolah :</label>
+					<select class="from-control" name="Pendidikan">
+						<option>Pilih</option>
+						<option value="A">A (Sangat Baik)</option>
+						<option value="B">B (Baik)</option>
+						<option value="C">C (Cukup)</option>
+						<option value="D">Tidak Terakreditasi</option>
+					</select>
+				</div>
+				</div>
+
+				<div class="alert alert-secondary">
+				<strong>PILIHAN PROGRAM STUDI</strong>
+			</div>
+			<div class="col-sm">
+					<div class="form-group">
+					<label>Pilih Program Studi :</label>
+					<select class="from-control" name="Pendidikan">
+						<option>Pilih</option>
+						<option value="S1 - Ilmu Komputer">S1 - Ilmu Komputer</option>
+						<option value="S1 - Sistem Informasi">S1 - Sistem Informasi</option>
+						<option value="S1 - Ilmu Ekonomi">S1 - Ilmu Ekonomi</option>
+						<option value="S1 - Manajemen">S1 - Manajemen</option>
+						<option value="S1 - Akuntansi">S1 - Akuntansi</option>
+						<option value="S1 - Ilmu Hukum">S1 - Ilmu Hukum</option>
+						<option value="S1 - Ilmu Komunikasi">Ilmu Komunikasi</option>
+						<option value="S1 - Ilmu Pemerintahan">Ilmu Pemerintahan</option>
+					</select>m
+				</div>
+				</div>
+			</div>
+
+			<div class="alert alert-succes">
+				<strong>
+					<input type="checbox" name="pernyataan1" value="pernyataan1">
+					Saya menyatakan bahwa data yang saya sudah saya isi diatas sudah benar.
+				<br> 
+					<input type="checbox" name="pernyataan1" value="pernyataan1">
+					Saya bersedia menerima sanksi pembatalan penerimaan di Program Studi yang saya pilih apabila saya melanggar pernyataan ini.
+				</strong>
+			</div>
+
+			<center>
+				<button type="submit" name="submit" class="btn btn-primary">Daftar</button>
+				<button type="reset" name="reset" class="btn btn-secondary">Reset</button>
+			</center>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PMB Online</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<!-- bagian box formulir -->
+	<section class="box-formulir">
+
+		<h2>Form Pendaftaran Mahasiswa Baru</h2>
+
+		<!-- bagian form -->
+		<form action="" method="post">
+
+			<div class="box">
+				<table border="0" class="table-form">
+					<tr>
+						<td>Tahun Ajaran</td>
+						<td>:</td>
+						<td>
+							<input type="text" name="thn_ajaran" class="input-control"value="2022/2023" readonly>
+						</td>	
+					</tr>
+					<tr>
+						<td>Jurusan</td>
+						<td>:</td>
+						<td>
+							<select class="input-control" name="jurusan">
+								<option value="">--Pilih--</option> 
+								<option value="Ilmu Komputer">Ilmu Komputer</option>
+								<option value="Sistem Informasi">Sistem Informasi</option>
+								<option value="Teknik Informatika">Teknik Informatika</option>
+							</select>
+						</td>	
+					</tr>
+				</table>
+			</div>	
+				
+			<h3>Data Diri Calon Mahasiswa</h3>
+			<div class="box">
+				<table border="0" class="table-form">
+					<tr>
+						<td>Nama Lengkap</td>
+						<td>:</td>
+						<td>
+							<input type="text" name="nama_peserta" class="input-control">
+						</td>	
+					</tr>
+					<tr>
+						<td>Tempat Lahir</td>
+						<td>:</td>
+						<td>
+							<input type="text" name="tmpt_lahir" class="input-control">
+						</td>	
+					</tr>
+					<tr>
+						<td>Tanggal Lahir</td>
+						<td>:</td>
+						<td>
+							<input type="date" name="tgl_lahir" class="input-control">
+						</td>	
+					</tr>
+					<tr>
+						<td>Jenis Kelamin</td>
+						<td>:</td>
+						<td>
+							<input type="radio" name="jk" class="input-control" value="Laki-Laki"> Laki-Laki &nbsp;&nbsp;&nbsp;
+							<input type="radio" name="jk" class="input-control" value="Perempuan"> Perempuan
+					<tr>
+						<td>Agama</td>
+						<td>:</td>
+						<td>
+							<select class="input-control" name="agama">
+								<option value="">--Pilih--</option> 
+								<option value="Islam">Islam</option>
+								<option value="Katholik">Katholik</option>
+								<option value="Protestan">Protestan</option>
+								<option value="Hindu">Hindu</option>
+								<option value="Buddha">Buddha</option>
+							</select>
+						</td>	
+					</tr>
+					<tr>
+						<td>Alamat Lengkap</td>
+						<td>:</td>
+						<td>
+							<textarea class="input-control" name="alamat"></textarea>
+						</td>	
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>
+							<input type="submit" name="submit" class="btn-daftar" value="Daftar Sekarang">
+						</td>	
+					</tr>
+				</table>
+			</div>	
+		</form>
+	</section>
+
+</body>
+</html>
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+}
+body {
+	background-color: #f8f8f8;
+}
+.box-formulir {
+	width: 50%;
+	margin: 100px auto;
+}
+.box {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 5px 0 25px;
+}
+.table-form {
+	width: 100%;
+	border-width: 100%;
+}
+.table-form tr td:nth-child(1) {
+	width: 30%;
+}
+.input-cpntrol{
+	padding: 5px 10px;
+	font-size: 16px;
+	margin: 5px 0;
+}
+.btn-daftar {
+	padding: 10px 17px;
+	background-color: #4A99D7;
+	color: #fff;
+	border: none;
+	font-size: 14px;
+}
+.btn-daftar:hover{
+	cursor: pointer;
+	background-color: #4881AE;
+}
+.btn-cetak{
+	display: inline-block;
+	padding: 10px 17px;
+	color: #fff;
+	background-color: #FF5733;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.table-data {
+	width: 100%;
+	margin-top: 10px;
+}
+.table-data tr{
+	height: 35px;
+}
+.table-data tr td:nth-child(1) {
+	width: 30%;
+}
+.main-login {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.box-login {
+	width: 320px;
+	min-height: 200px;
+}
+.box-login h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.btn-login {
+	padding: 3px 20px;
+	background-color: #C70039;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.btn-login: hover {
+	cursor: pointer;
+	background-color: #900C3F;
+}
+header {
+	background-color: #fff;
+}
+header::after {
+	content:'';
+	display: block;
+	clear: both;
+}
+header h1 {
+	padding: 15px 25px;
+	display: inline-block;
+	float: left;
+}
+header ul {
+	float: left;
+}
+header ul li {
+	padding: 24px 25px;
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+}
+.content {
+	width: 90%;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 50px auto;
+}
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+.table tr {
+	height: 30px;
+}
+.table tr td {
+	padding: 5px 10px;
+}
+.table tr td:nth-child(1) {
+	text-align: center;
+}
+
+
+
+$no=0;
+        $query =mysqli_query($conn, "SELECT * FROM tb_jurusan ORDER BY kd_jurusan DESC");
+       	while($result =mysqli_fetch_array($query))
+       	$no++    
